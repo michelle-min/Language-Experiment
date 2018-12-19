@@ -1,8 +1,7 @@
 //Collecting data with php/server 
 
-//var experimentName = "min-jp-exp";
-//var submitAddress = "https://web.stanford.edu/~sunwooj/cgi-bin/process.php";
-
+var experimentName = "min-jp-exp";
+var submitAddress = "https://web.stanford.edu/~sunwooj/cgi-bin/process.php";
 
 
 
@@ -14,11 +13,55 @@ var stimuliList = shuffle([
 
 ["책", "권이", "book", "gwon", [["book-40", "마흔", "사십"], ["book-48", "마흔 여덟", "사십 팔"]]],
 
+
 ["고양이", "마리가", "cat", "mari", [["cat-06", "여섯", "육"], ["cat-01", "한", "일"]]],
 
 ["고양이", "마리가", "cat", "mari", [["cat-20", "스무", "이십"], ["cat-23", "스물 세", "이십 삼"]]],
 
-["고양이", "마리가", "cat", "mari", [["cat-48", "마흔 여덟", "사십 팔"], ["cat-40", "마흔", "사십"]]]
+["고양이", "마리가", "cat", "mari", [["cat-48", "마흔 여덟", "사십 팔"], ["cat-40", "마흔", "사십"]]],
+
+
+["컵", "장이", "cup", "jan", [["cup-01", "한", "일"], ["cup-06", "여섯", "육"]]], 
+
+["컵", "장이", "cup", "jan", [["cup-23", "스물 세", "이십 삼"], ["cup-20", "스무", "이십"]]],
+
+["컵", "장이", "cup", "jan", [["cup-40", "마흔", "사십"], ["cup-48", "마흔 여덟", "사십 팔"]]],
+
+
+["계란", "알이", "egg", "al", [["egg-06", "여섯", "육"], ["egg-01", "한", "일"]]],
+
+["계란", "알이", "egg", "al", [["egg-20", "스무", "이십"], ["egg-23", "스물 세", "이십 삼"]]],
+
+["계란", "알이", "egg", "al", [["egg-48", "마흔 여덟", "사십 팔"], ["egg-40", "마흔", "사십"]]],
+
+
+["고기", "근이", "meat", "kun", [["meat-01", "한", "일"], ["meat-06", "여섯", "육"]]], 
+
+["고기", "근이", "meat", "kun", [["meat-23", "스물 세", "이십 삼"], ["meat-20", "스무", "이십"]]],
+
+["고기", "근이", "meat", "kun", [["meat-40", "마흔", "사십"], ["meat-48", "마흔 여덟", "사십 팔"]]],
+
+
+["종이", "장이", "paper", "jang", [["paper-06", "여섯", "육"], ["paper-01", "한", "일"]]],
+
+["종이", "장이", "paper", "jang", [["paper-20", "스무", "이십"], ["paper-23", "스물 세", "이십 삼"]]],
+
+["종이", "장이", "paper", "jang", [["paper-48", "마흔 여덟", "사십 팔"], ["paper-40", "마흔", "사십"]]],
+
+
+["쌀", "가마가", "rice", "kama", [["rice-01", "한", "일"], ["rice-06", "여섯", "육"]]], 
+
+["쌀", "가마가", "rice", "kama", [["rice-23", "스물 세", "이십 삼"], ["rice-20", "스무", "이십"]]],
+
+["쌀", "가마가", "rice", "kama", [["rice-40", "마흔", "사십"], ["rice-48", "마흔 여덟", "사십 팔"]]],
+
+
+["선생님", "명이", "teacher", "myung", [["teacher-06", "여섯", "육"], ["teacher-01", "한", "일"]]],
+
+["선생님", "명이", "teacher", "myung", [["teacher-20", "스무", "이십"], ["teacher-23", "스물 세", "이십 삼"]]],
+
+["선생님", "명이", "teacher", "myung", [["teacher-48", "마흔 여덟", "사십 팔"], ["teacher-40", "마흔", "사십"]]],
+
 
 ]);
 
@@ -63,7 +106,7 @@ var conditionRandom = Math.floor(Math.random() * 2);
         
 
 function stepExperiment () {
-    if (trialnum == 4) { // end the experiment. 
+    if (trialnum == 24) { // end the experiment. 
         document.body.scrollTop = document.documentElement.scrollTop = 0;
         showSlide("language");
         $('#lgsubmit').click(function() {
@@ -190,7 +233,7 @@ $( function() {
 
         $("#slider1").css({"background": "#CCFFFF"});
         $("#slider1 .ui-slider-handle").css({
-                      "background": "#E0F5FF",
+                      "background": "#B3C4CC",
                       "border-color": "#001F29"
                   });
 
@@ -219,7 +262,7 @@ $( function() {
 
         $("#slider2").css({"background": "#CCFFFF"});
         $("#slider2 .ui-slider-handle").css({
-                      "background": "#E0F5FF",
+                      "background": "#B3C4CC",
                       "border-color": "#001F29"
                   });
 
