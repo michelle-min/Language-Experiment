@@ -1,7 +1,7 @@
 //Collecting data with php/server 
 
-var experimentName = "min-jp-exp";
-var submitAddress = "https://web.stanford.edu/~sunwooj/cgi-bin/process.php";
+//var experimentName = "min-jp-exp";
+//var submitAddress = "https://web.stanford.edu/~sunwooj/cgi-bin/process.php";
 
 
 
@@ -60,7 +60,7 @@ var stimuliList = shuffle([
 
 ["선생님", "명이", "teacher", "myung", [["teacher-20", "스무", "이십"], ["teacher-23", "스물 세", "이십 삼"]]],
 
-["선생님", "명이", "teacher", "myung", [["teacher-48", "마흔 여덟", "사십 팔"], ["teacher-40", "마흔", "사십"]]],
+["선생님", "명이", "teacher", "myung", [["teacher-48", "마흔 여덟", "사십 팔"], ["teacher-40", "마흔", "사십"]]]
 
 
 ]);
