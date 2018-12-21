@@ -21,11 +21,11 @@ var stimuliList = shuffle([
 ["고양이", "마리가", "cat", "mari", [["cat-48", "마흔 여덟", "사십 팔"], ["cat-40", "마흔", "사십"]]],
 
 
-["컵", "장이", "cup", "jan", [["cup-01", "한", "일"], ["cup-06", "여섯", "육"]]], 
+["물", "리터가", "cup", "liter", [["cup-01", "한", "일"], ["cup-06", "여섯", "육"]]], 
 
-["컵", "장이", "cup", "jan", [["cup-23", "스물 세", "이십 삼"], ["cup-20", "스무", "이십"]]],
+["물", "리터가", "cup", "liter", [["cup-23", "스물 세", "이십 삼"], ["cup-20", "스무", "이십"]]],
 
-["컵", "장이", "cup", "jan", [["cup-40", "마흔", "사십"], ["cup-48", "마흔 여덟", "사십 팔"]]],
+["물", "리터가", "cup", "liter", [["cup-40", "마흔", "사십"], ["cup-48", "마흔 여덟", "사십 팔"]]],
 
 
 ["계란", "알이", "egg", "al", [["egg-06", "여섯", "육"], ["egg-01", "한", "일"]]],
@@ -35,11 +35,11 @@ var stimuliList = shuffle([
 ["계란", "알이", "egg", "al", [["egg-48", "마흔 여덟", "사십 팔"], ["egg-40", "마흔", "사십"]]],
 
 
-["고기", "근이", "meat", "kun", [["meat-01", "한", "일"], ["meat-06", "여섯", "육"]]], 
+["고기", "근이", "meat", "gun", [["meat-01", "한", "일"], ["meat-06", "여섯", "육"]]], 
 
-["고기", "근이", "meat", "kun", [["meat-23", "스물 세", "이십 삼"], ["meat-20", "스무", "이십"]]],
+["고기", "근이", "meat", "gun", [["meat-23", "스물 세", "이십 삼"], ["meat-20", "스무", "이십"]]],
 
-["고기", "근이", "meat", "kun", [["meat-40", "마흔", "사십"], ["meat-48", "마흔 여덟", "사십 팔"]]],
+["고기", "근이", "meat", "gun", [["meat-40", "마흔", "사십"], ["meat-48", "마흔 여덟", "사십 팔"]]],
 
 
 ["종이", "장이", "paper", "jang", [["paper-06", "여섯", "육"], ["paper-01", "한", "일"]]],
@@ -49,18 +49,18 @@ var stimuliList = shuffle([
 ["종이", "장이", "paper", "jang", [["paper-48", "마흔 여덟", "사십 팔"], ["paper-40", "마흔", "사십"]]],
 
 
-["쌀", "가마가", "rice", "kama", [["rice-01", "한", "일"], ["rice-06", "여섯", "육"]]], 
+["쌀", "톨이", "rice", "toli", [["rice-01", "한", "일"], ["rice-06", "여섯", "육"]]], 
 
-["쌀", "가마가", "rice", "kama", [["rice-23", "스물 세", "이십 삼"], ["rice-20", "스무", "이십"]]],
+["쌀", "톨이", "rice", "toli", [["rice-23", "스물 세", "이십 삼"], ["rice-20", "스무", "이십"]]],
 
-["쌀", "가마가", "rice", "kama", [["rice-40", "마흔", "사십"], ["rice-48", "마흔 여덟", "사십 팔"]]],
+["쌀", "톨이", "rice", "toli", [["rice-40", "마흔", "사십"], ["rice-48", "마흔 여덟", "사십 팔"]]],
 
 
 ["선생님", "명이", "teacher", "myung", [["teacher-06", "여섯", "육"], ["teacher-01", "한", "일"]]],
 
 ["선생님", "명이", "teacher", "myung", [["teacher-20", "스무", "이십"], ["teacher-23", "스물 세", "이십 삼"]]],
 
-["선생님", "명이", "teacher", "myung", [["teacher-48", "마흔 여덟", "사십 팔"], ["teacher-40", "마흔", "사십"]]],
+["선생님", "명이", "teacher", "myung", [["teacher-48", "마흔 여덟", "사십 팔"], ["teacher-40", "마흔", "사십"]]]
 
 
 ]);
@@ -110,16 +110,42 @@ function stepExperiment () {
         document.body.scrollTop = document.documentElement.scrollTop = 0;
         showSlide("language");
         $('#lgsubmit').click(function() {
-            var eval = $('.ev:checked').val();
-            var nat = $('.natE:checked').val();
-            var age = $('.age:checked').val();
+            // var eval = $('.ev:checked').val();
+            var age = $('#age').val();
+            age = age.replace (/,/g, "");
             var gender = $('.gen:checked').val();
+            var langdom = $('#langDominance').serialize();
+            var langacq = $('#langAcquisition').serialize();
+            var culture = $('#culture').val();
+            var edu = $('#edu').val();
+            var korCountry = $('#korCountry').val();
+            var korFamily = $('#korFamily').val();
+            var korSchool = $('#korSchool').val();
+            var korWork = $('#korWork').val();
+            var profSpeak = $('#profSpeak').val();
+            var profHear = $('#profHear').val();
+            var profRead = $('#profRead').val();
+            var gen_com = $('#lang_com').val();
+            gen_com = gen_com.replace (/,/g, "");
 
-        if ($('.natE:checked').length > 0 && $('.age:checked').length > 0 && $('.gen:checked').length > 0) {
 
-            data.nat = nat;
+        if ($('.gen:checked').length > 0 && age.length > 0) {
+// && langdom.length > 0 && langacq.length > 0 && culture.length > 0 && edu.length > 0
+
+            // data.eval = eval;
             data.age = age;
             data.gender = gender;
+            data.langdom = langdom;
+            data.langacq = langacq;
+            data.culture = culture;
+            data.edu = edu;
+            data.korCountry = korCountry;
+            data.korFamily = korFamily;
+            data.korSchool = korSchool;
+            data.profSpeak = profSpeak;
+            data.profHear = profHear;
+            data.profRead = profRead;
+            data.gen_com = gen_com;
 
 			showSlide('finish');
 			setTimeout(function() { turk.submit(data)}, 1000);                 
@@ -136,7 +162,7 @@ function stepExperiment () {
 
 
         trialnum += 1;
-        stimuliVector = stimuliList[trialnum];
+        stimuliVector = stimuliList[trialnum-1];
         itemStim = stimuliVector[0];
         itemStimE = stimuliVector[2];
         classStim = stimuliVector[1];

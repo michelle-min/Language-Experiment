@@ -217,7 +217,18 @@ You are done with the main experiment. As a final step, we ask that you fill out
 </p> <br>
 
 
-<form id='age'>
+<!-- <form id='eval'>
+<p class='questionSent'> 0. Was the experiment difficult to complete?
+<br>
+<br>
+  <input type='radio' class='ev' name='ev' id='yes' value='yes' /> Yes <br>
+  <input type='radio' class='ev' name='ev' id='no' value='no' /> No <br>
+  <input type='radio' class='ev' name='ev' id='maybe' value='maybe' /> Maybe
+</p>
+</form> -->
+
+
+<form id='ageForm'>
 <p class='questionSent'> 1. What is your age?
 <br>
 <br>
@@ -330,12 +341,12 @@ You are done with the main experiment. As a final step, we ask that you fill out
   </tr>
   <tr>
     <td>a country where Korean is spoken</td>
-    <td>한국어가 사용되는 극가에서</td>
+    <td>한국어가 사용되는 국가에서</td>
     <td> <input type='number' class='environ' name='korCountry' id='korCountry' min='0' max='100' placeholder='0'/> </td> 
   </tr>
   <tr>
     <td>a family where Korean is spoken</td>
-    <td>한국어를 사용하는 가장에서</td>
+    <td>한국어를 사용하는 가정에서</td>
     <td> <input type='number' class='environ' name='korFamily' id='korFamily' min='0' max='100' placeholder='0'/> </td> 
   </tr>
   <tr>
@@ -400,7 +411,7 @@ You are done with the main experiment. As a final step, we ask that you fill out
   <tr>
     <td>reading</td>
     <td>읽기</td>
-    <td> <select class='proficiency' name='profRead' id='profHear'>
+    <td> <select class='proficiency' name='profRead' id='profRead'>
     <option value='0'>0 - none / 전혀 못함
     <option value='1'>1 - very low / </option>
     <option value='2'>2 - low</option>
