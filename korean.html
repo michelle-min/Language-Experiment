@@ -5,9 +5,9 @@
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 
-<!-- FOR PHP DATA GATHERING -->
+<!-- FOR PHP DATA GATHERING 
 
-<script type="text/javascript" src="https://stanford.edu/~sunwooj/experiments/mmturkey-extension.js"></script>
+<script type="text/javascript" src="https://stanford.edu/~sunwooj/experiments/mmturkey-extension.js"></script> -->
 
 <!-- Debug mode -->
 
@@ -155,8 +155,8 @@ Q1: To describe the item(s) above, which expression would you use? <br>
 <br>
 <br>
 
-<!--<p class='block-text2'>Q3: How natural do you think the following Korean expression is? <br> 
-다음 표현이 얼마나 자연스러운 한국어 표현이라 생각하십니까? </p>-->
+<!-- <p class='block-text2'>Q3: How natural do you think the following Korean expression is? <br> 
+다음 표현이 얼마나 자연스러운 한국어 표현이라 생각하십니까? </p> -->
 
 <p class='block-text' style='font-weight: bold;'>
 <span class='currentItem'>{{}}</span> 
@@ -365,7 +365,7 @@ You are done with the main experiment. As a final step, we ask that you fill out
 
 
 <form id='proficiencyForm'>
-<p class='questionSent'> 8. Please select your level of <b>proficiency</b> in speaking, understanding, and reading this language. 
+<p class='questionSent'> 8. Please select your level of <b>proficiency</b> in speaking, understanding, and reading Korean. 
 <br> 당신의 한국어의 말하기, 듣고 이해하기, 읽기의 능숙한 정도를 0부터 10까지의 선택지를 동하여 답하시오.
 <br>
 <table style="width:100%">
@@ -439,8 +439,18 @@ You are done with the main experiment. As a final step, we ask that you fill out
 </form>-->
 
 
+<form id='dialectsForm'>
+<p class='questionSent'> 9. Do you know any dialects in Korean?
+<br> 사투리를 쓰실 수 있습니까?
+<br>
+  <input type='radio' class='dia' name='dia' id='Ydia' /> Yes <br>
+  <input type='radio' class='dia' name='dia' id='Ndia' /> No <br>
+</p>
+</form>
+
+
 <form id='commentsForm'>
-<p class='questionSent'>9. Any other comments about the questions above or the general experiment?
+<p class='questionSent'>10. Any other comments about the questions above or the general experiment?
 <br>
 <br>
 <input type='text' id='lang_com' value="" />
