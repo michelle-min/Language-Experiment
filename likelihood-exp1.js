@@ -223,6 +223,7 @@ function stepExperiment () {
 
                     trial = {};
                     trial.item = itemStimE;
+                    trial.picture = picStim;
                     trial.classifier = classStimE;
                     trial.choice = choiceResponse;
                     trial.nat_rating = sliderResponse1;
