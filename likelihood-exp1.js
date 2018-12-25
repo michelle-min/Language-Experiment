@@ -1,6 +1,6 @@
 //Collecting data with php/server 
 
-var experimentName = "min-jp-exp";
+var experimentName = "min-jp-exp2";
 var submitAddress = "https://web.stanford.edu/~sunwooj/cgi-bin/process.php";
 
 
@@ -222,8 +222,10 @@ function stepExperiment () {
                 $("#warning").html("");
 
                     trial = {};
-                    trial.item = itemStimE;
                     trial.picture = picStim;
+                    // trial.item = itemStimE;
+                    trial.natstim = natStim;
+                    trial.sinostim = sinoStim;
                     trial.classifier = classStimE;
                     trial.choice = choiceResponse;
                     trial.nat_rating = sliderResponse1;
